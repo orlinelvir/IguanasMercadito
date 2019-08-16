@@ -9,11 +9,11 @@ public class Main {
     private static final int O_Leche = 0;
     private static final int O_Queso = 1;
     private static final int O_Quesillo = 2;
-    private static final int O_Requeson = 3;
+    private static final int O_Cuajada = 3;
     private static final int O_Bebidas = 4;
     private static final int O_Salir = 7;
     private static final int O_Salva = 0;
-    private static final int O_Port = 1;
+    private static final int O_Port_Royal = 1;
     private static final int O_Coronita = 2;
     private static final int O_Corona = 3;
     private static final int O_SalirAlcohol = 4;
