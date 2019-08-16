@@ -14,13 +14,13 @@ public class Main {
     private static final int O_Salir = 7;
     private static final int O_Salva = 0;
     private static final int O_Port_Royal = 1;
-    private static final int O_Coronita = 2;
+    private static final int O_Guaro = 2;
     private static final int O_Corona = 3;
     private static final int O_SalirAlcohol = 4;
     public static void main(String[] args) {
         int opcion = -1;
-        String producto[] = {"Leche", "Queso", "Quesillo", "Requeson"};
-        String productoAlcohol[] = {"Salva vidas", "Port Royal", "Coronita", "Corona", "Bebidas Alcoholicas"};
+        String producto[] = {"Leche", "Queso", "Quesillo", "Cuajada"};
+        String productoAlcohol[] = {"Salva vidas", "Port Royal", "Guaro", "Corona", "Bebidas Alcoholicas"};
         double precioAlcohol [] = {25,28, 20, 32};
         double precio[] = {20, 45, 48, 35};
         double cantidad[] = {0,0,0,0};
@@ -76,8 +76,8 @@ public class Main {
                     cantidad[O_Quesillo] += 1;
                     break;
                 case 114:
-                    subtotal += requeson(precio);
-                    cantidad[O_Requeson] += 1;
+                    subtotal += O_Cuajada(precio);
+                    cantidad[O_Cuajada] += 1;
                     break;
                 case 6:
                     menuAlcohol(sc,opcion,productoAlcohol,precioAlcohol, subtotalAlcohol,totalAlcohol,isvAlcohol,impuestoAlcohol,cantidadAlcohol);
@@ -118,8 +118,8 @@ public class Main {
         do{
             System.out.println("\t \t \t \t Bebidas Alcoholicas \n \n Codigo \t \t   Producto \t \t \t \t Precio \n \n "
                     + "201.............. " + productoAlcohol[O_Salva] + "\t \t \t \t L. " + precioAlcohol[O_Salva]
-                    + "\n 202.............. " + productoAlcohol[O_Port] + "\t \t \t \t L. " + precioAlcohol[O_Port]
-                    + "\n 203.............. " + productoAlcohol[O_Coronita] + "\t \t \t \t \t L. " + precioAlcohol[O_Coronita]
+                    + "\n 202.............. " + productoAlcohol[O_Port_Royal] + "\t \t \t \t L. " + precioAlcohol[O_Port_Royal]
+                    + "\n 203.............. " + productoAlcohol[O_Guaro] + "\t \t \t \t \t L. " + precioAlcohol[O_Guaro]
                     + "\n 204.............. " + productoAlcohol[O_Corona] + "\t \t \t \t \t L. " + precioAlcohol[O_Corona]
                     + "\n 4................ Totalizar Bebidas Alcoholicas y regresar al menu principal " );
             opcion = leerEnteroValidado(sc,"Ha ingresado un caracter no valido o numero no valido");
@@ -130,7 +130,7 @@ public class Main {
                     break;
                 case 202:
                     subtotalAlcohol += portroyal(precioAlcohol);
-                    cantidadAlcohol[O_Port] += 1;
+                    cantidadAlcohol[O_Port_Royal] += 1;
                     break;
                 case 203:
                     subtotalAlcohol += coronita(precioAlcohol);
@@ -183,8 +183,8 @@ public class Main {
             i++;
         }
         i = 0;
-        while(i<cantidad[O_Requeson]) {
-            System.out.println("Requeson" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Requeson]+ "G");
+        while(i<cantidad[O_Cuajada]) {
+            System.out.println("Requeson" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Cuajada]+ "G");
             i++;
         }
         while (i < cantidadAlcohol[O_Salva]) {
@@ -193,15 +193,15 @@ public class Main {
             i++;
         }
         i = 0;
-        while (i < cantidadAlcohol[O_Port]) {
-            System.out.println("PortRoyal" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Port]+ "G");
-            subtotalAlcohol += precioAlcohol[O_Port];
+        while (i < cantidadAlcohol[O_Port_Royal]) {
+            System.out.println("PortRoyal" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Port_Royal]+ "G");
+            subtotalAlcohol += precioAlcohol[O_Port_Royal];
             i++;
         }
         i = 0;
-        while(i<cantidadAlcohol[O_Coronita]){
-            System.out.println("Coronita" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Coronita]+ "G");
-            subtotalAlcohol += precioAlcohol[O_Coronita];
+        while(i<cantidadAlcohol[O_Guaro]){
+            System.out.println("Coronita" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Guaro]+ "G");
+            subtotalAlcohol += precioAlcohol[O_Guaro];
             i++;
         }
         i = 0;
@@ -232,7 +232,7 @@ public class Main {
         System.out.println("\t \t \t \t \t    ***");
         System.out.println("\t \t \t \t  - Cuenta Cerrada -");
     }
-    public static double salvavida (double[] precioAlcohol){
+    static double salvavida (double[] precioAlcohol){
         double subtotal = precioAlcohol[O_Salva];
         System.out.println("Se ha agregado una cerveza Salva Vidas al carrito");
         System.out.println(subtotal);
@@ -240,13 +240,13 @@ public class Main {
     }
 
     public static double portroyal (double[] precioAlcohol){
-        double subtotal = precioAlcohol[O_Port];
+        double subtotal = precioAlcohol[O_Port_Royal];
         System.out.println("Se ha agregado una cerveza PortRoyal al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
     public static double coronita (double[] precioAlcohol){
-        double subtotal = precioAlcohol[O_Coronita];
+        double subtotal = precioAlcohol[O_Guaro];
         System.out.println("Se ha agregado una cerveza Coronita al carrito");
         System.out.println(subtotal);
         return subtotal;
@@ -276,7 +276,7 @@ public class Main {
         return subtotal;
     }
     public static double requeson (double[] precio){
-        double subtotal = precio[O_Requeson];
+        double subtotal = precio[O_Cuajada];
         System.out.println("Se ha agregado una libra de requeson al carrito");
         System.out.println(subtotal);
         return subtotal;
