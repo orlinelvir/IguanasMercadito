@@ -6,10 +6,12 @@ public class Menu { public int menu() {
     System.out.println("");
     System.out.println("");
     System.out.println("\t \t \t \t MENU\t \t \t \t \t");
+    System.out.println("\t \t \t Pulpería Ruty\t \t \t \t \t");
     System.out.println("1. PRODUCTOS ");
     System.out.println("2. CLIENTES ");
     System.out.println("3. FACTURA ");
     System.out.println("0. SALIR");
+    System.out.println("\t \t Gracias por su preferencia\t \t \t");
     int opcion = 0;
     while ((opcion < 1) || (opcion > 6)) {
         System.out.println("Favor Ingresar Una Opcion : ");
@@ -27,8 +29,8 @@ public class Menu { public int menu() {
         System.out.println("");
         Scanner Sc = new Scanner(System.in);
         System.out.println("");
-        System.out.println("========================MENU==========================");
-        System.out.println("==================MENU DE CLIENTES==============");
+        System.out.println("\t \t \t \tMENU\t \t \t \t");
+        System.out.println("\t \t \t \tMENU DE CLIENTES\t \t \t \t");
         System.out.println("1. AGREGAR CLIENTE ");
         System.out.println("2. VER CLIENTE ");
         System.out.println("3. ELIMINAR CLIENTE ");
@@ -51,7 +53,7 @@ public class Menu { public int menu() {
     public int MenuDeProductos() {
         System.out.println("");
         System.out.println("");
-        System.out.println("========================MENU==========================");
+        System.out.println("\t \t \t \tMENU\t \t \t \t");
         System.out.println("1. AGREGAR PRODUCTOS ");
         System.out.println("2. VER PRODUCTOS ");
         System.out.println("3. ELIMINAR PRODUCTO ");

@@ -150,8 +150,8 @@ public class Main {
                                        double subtotalCombinado, double totalImpuestos) {
         System.out.println("\n \t \t \t \t \t \t  FACTURA \n \t \t \t \t \t \t  ======= \n");
         System.out.println("\t \t \t \t \t \t Pulperia Ruty");
-        System.out.println("\t \t \t \t \t RTN: 0801200006350");
         System.out.println("\t \t \t\t Col. Travesía, Tegucigalpa");
+        System.out.println("\t \t \t \t \t RTN: 0801200006350");
         System.out.println("\t \t \t \t \t Tel: +504 3241-5582");
         System.out.println("\t \t \t Correo: pulperia.ruty@gmail.com");
         DateFormat hourdateFormat = new SimpleDateFormat("hh:mm:ss a dd/MM/yyyy");
@@ -167,6 +167,8 @@ public class Main {
         System.out.println("\t \t   CAI: 2H6P98-78J45O-47GH21-21WE63-03S4DF-32");
         System.out.println("\t \t \t \t Lo atendió: Orlin Elvir \n \n " );
         System.out.println("\t \t \t \t Gracias por su visita \n \n " );
+        System.out.println("\t \t \t \t Fue un placer atenderle \n \n " );
+        System.out.println("\t \t \t \t Fuera JOH \n \n " );
         int i = 0;
         while (i < cantidad[O_Leche]) {
             System.out.println("Leche" + "\t \t \t \t \t \t \t \t \t \t    " + precio[O_Leche] + "G");
