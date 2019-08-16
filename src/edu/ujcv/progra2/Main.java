@@ -1,4 +1,4 @@
-package com.company;
+package edu.ujcv.progra2;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -58,7 +58,7 @@ public class Main {
             System.out.println("\t \t \t \t Mercadito Torres \n \n Codigo \t \t   Producto \t \t \t \t Precio \n \n 111.............. " + producto[O_Leche] + "\t \t \t \t \t L. " + precio[O_Leche]
                     + "\n 112.............. " + producto[O_Queso] + "\t \t \t \t \t L. " + precio[O_Queso]
                     + "\n 113.............. " + producto[O_Quesillo] + "\t \t \t \t \t L. " + precio[O_Quesillo]
-                    + "\n 114.............. " + producto[O_Requeson] + "\t \t \t \t \t L. " + precio[O_Requeson]
+                    + "\n 114.............. " + producto[O_Cuajada] + "\t \t \t \t \t L. " + precio[O_Cuajada]
                     + "\n 6................ " + productoAlcohol[O_Bebidas]
                     + "\n 7................ Totalizar");
             opcion = leerEnteroValidado(sc,"Ha ingresado un caracter no valido o numero no valido");
@@ -76,7 +76,7 @@ public class Main {
                     cantidad[O_Quesillo] += 1;
                     break;
                 case 114:
-                    subtotal += O_Cuajada(precio);
+                    subtotal += requeson(precio);
                     cantidad[O_Cuajada] += 1;
                     break;
                 case 6:
@@ -134,7 +134,7 @@ public class Main {
                     break;
                 case 203:
                     subtotalAlcohol += coronita(precioAlcohol);
-                    cantidadAlcohol[O_Coronita] += 1;
+                    cantidadAlcohol[O_Guaro] += 1;
                     break;
                 case 204:
                     subtotalAlcohol += corona(precioAlcohol);
@@ -149,12 +149,12 @@ public class Main {
                                        double subtotalAlcohol, double isv, double isvAlcohol, double impuesto, double impuestoAlcohol, double dolares, double [] cantidadAlcohol, double[] precioAlcohol,
                                        double subtotalCombinado, double totalImpuestos) {
         System.out.println("\n \t \t \t \t \t \t  FACTURA \n \t \t \t \t \t \t  ======= \n");
-        System.out.println("\t \t \t \t \t Mercadito Torres");
-        System.out.println("\t \t \t \t \t RTN: 08019878659894");
-        System.out.println("\t \t \t Centro Comercial Portal de Viera");
-        System.out.println("\t \t \t Carretera al Hatillo, Tegucigalpa");
-        System.out.println("\t \t \t \t \t Tel: +504 2248-6974");
-        System.out.println("\t \t \t Correo: mercadito_torres@gmail.com");
+        System.out.println("\t \t \t \t \t Mercadito Elvir Garay");
+        System.out.println("\t \t \t \t \t RTN: 0801200006350");
+        System.out.println("\t \t \t Pulpería Ruty");
+        System.out.println("\t \t \t Col. Travesía, Tegucigalpa");
+        System.out.println("\t \t \t \t \t Tel: +504 3241-5582");
+        System.out.println("\t \t \t Correo: pulperia.ruty@gmail.com");
         DateFormat hourdateFormat = new SimpleDateFormat("hh:mm:ss a dd/MM/yyyy");
         Date date = new Date();
         System.out.println("\t \t \t \t \t" + hourdateFormat.format(date));
@@ -166,7 +166,7 @@ public class Main {
         System.out.println(" \t \t \t \t \t RTN: " + rtn);
         System.out.println("\t \t \t \t \t FACTURA ORIGINAL");
         System.out.println("\t \t   CAI: 2H6P98-78J45O-47GH21-21WE63-03S4DF-32");
-        System.out.println("\t \t \t \t \t Lo atendio: Carlos \n \n " );
+        System.out.println("\t \t \t \t \t Lo atendió: Orlin Elvir \n \n " );
         int i = 0;
         while (i < cantidad[O_Leche]) {
             System.out.println("Leche" + "\t \t \t \t \t \t \t \t \t \t    " + precio[O_Leche] + "G");
@@ -184,11 +184,11 @@ public class Main {
         }
         i = 0;
         while(i<cantidad[O_Cuajada]) {
-            System.out.println("Requeson" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Cuajada]+ "G");
+            System.out.println("Cuajada" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Cuajada]+ "G");
             i++;
         }
         while (i < cantidadAlcohol[O_Salva]) {
-            System.out.println("Salva Vidas" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Salva] + "G");
+            System.out.println("Salva Vida" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Salva] + "G");
             subtotalAlcohol += precioAlcohol[O_Salva];
             i++;
         }
@@ -200,7 +200,7 @@ public class Main {
         }
         i = 0;
         while(i<cantidadAlcohol[O_Guaro]){
-            System.out.println("Coronita" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Guaro]+ "G");
+            System.out.println("Guaro" + "\t \t \t \t \t \t \t \t \t    " + precioAlcohol[O_Guaro]+ "G");
             subtotalAlcohol += precioAlcohol[O_Guaro];
             i++;
         }
