@@ -101,7 +101,7 @@ public class Main {
                             }
                             if (seleccion == 2) {
                                 nombre = "Consumidor Final";
-                                rtn = "0888888888888";
+                                rtn = "SIN RTN";
                             }
                         }while(seleccion != 1 && seleccion !=2);
                         double subtotalCombinado = 0;
@@ -149,10 +149,9 @@ public class Main {
                                        double subtotalAlcohol, double isv, double isvAlcohol, double impuesto, double impuestoAlcohol, double dolares, double [] cantidadAlcohol, double[] precioAlcohol,
                                        double subtotalCombinado, double totalImpuestos) {
         System.out.println("\n \t \t \t \t \t \t  FACTURA \n \t \t \t \t \t \t  ======= \n");
-        System.out.println("\t \t \t \t \t Mercadito Elvir Garay");
+        System.out.println("\t \t \t \t \t \t Pulperia Ruty");
         System.out.println("\t \t \t \t \t RTN: 0801200006350");
-        System.out.println("\t \t \t Pulpería Ruty");
-        System.out.println("\t \t \t Col. Travesía, Tegucigalpa");
+        System.out.println("\t \t \t\t Col. Travesía, Tegucigalpa");
         System.out.println("\t \t \t \t \t Tel: +504 3241-5582");
         System.out.println("\t \t \t Correo: pulperia.ruty@gmail.com");
         DateFormat hourdateFormat = new SimpleDateFormat("hh:mm:ss a dd/MM/yyyy");
@@ -166,7 +165,8 @@ public class Main {
         System.out.println(" \t \t \t \t \t RTN: " + rtn);
         System.out.println("\t \t \t \t \t FACTURA ORIGINAL");
         System.out.println("\t \t   CAI: 2H6P98-78J45O-47GH21-21WE63-03S4DF-32");
-        System.out.println("\t \t \t \t \t Lo atendió: Orlin Elvir \n \n " );
+        System.out.println("\t \t \t \t Lo atendió: Orlin Elvir \n \n " );
+        System.out.println("\t \t \t \t Gracias por su visita \n \n " );
         int i = 0;
         while (i < cantidad[O_Leche]) {
             System.out.println("Leche" + "\t \t \t \t \t \t \t \t \t \t    " + precio[O_Leche] + "G");
@@ -234,38 +234,38 @@ public class Main {
     }
     static double salvavida (double[] precioAlcohol){
         double subtotal = precioAlcohol[O_Salva];
-        System.out.println("Se ha agregado una cerveza Salva Vidas al carrito");
+        System.out.println("Se ha agregado una chela Salva Vidas al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
 
     public static double portroyal (double[] precioAlcohol){
         double subtotal = precioAlcohol[O_Port_Royal];
-        System.out.println("Se ha agregado una cerveza PortRoyal al carrito");
+        System.out.println("Se ha agregado una chela PortRoyal al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
     public static double coronita (double[] precioAlcohol){
         double subtotal = precioAlcohol[O_Guaro];
-        System.out.println("Se ha agregado una cerveza Coronita al carrito");
+        System.out.println("Se ha agregado una tacha de Guaro al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
     public static double corona (double[] precioAlcohol){
         double subtotal = precioAlcohol[O_Corona];
-        System.out.println("Se ha agregado una cerveza Corona al carrito");
+        System.out.println("Se ha agregado una chela Corona al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
     public static double leche (double[] precio){
         double subtotal = precio[O_Leche];
-        System.out.println("Se ha agregado un litro de leche al carrito");
+        System.out.println("Se ha agregado un litro de leche de vaca al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
     public static double queso (double[] precio){
         double subtotal = precio[O_Queso];
-        System.out.println("Se ha agregado una libra de queso al carrito");
+        System.out.println("Se ha agregado una libra de quesito al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
@@ -277,7 +277,7 @@ public class Main {
     }
     public static double requeson (double[] precio){
         double subtotal = precio[O_Cuajada];
-        System.out.println("Se ha agregado una libra de requeson al carrito");
+        System.out.println("Se ha agregado una libra de cuajada al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
