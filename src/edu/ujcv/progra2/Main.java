@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     private static final int O_Leche = 0;
     private static final int O_Queso = 1;
-    private static final int O_Quesillo = 2;
+    private static final int O_Frijoles = 2;
     private static final int O_Cuajada = 3;
     private static final int O_Bebidas = 4;
     private static final int O_Salir = 7;
@@ -57,7 +57,7 @@ public class Main {
         do {
             System.out.println("\t \t \t \t Mercadito Torres \n \n Codigo \t \t   Producto \t \t \t \t Precio \n \n 111.............. " + producto[O_Leche] + "\t \t \t \t \t L. " + precio[O_Leche]
                     + "\n 112.............. " + producto[O_Queso] + "\t \t \t \t \t L. " + precio[O_Queso]
-                    + "\n 113.............. " + producto[O_Quesillo] + "\t \t \t \t \t L. " + precio[O_Quesillo]
+                    + "\n 113.............. " + producto[O_Frijoles] + "\t \t \t \t \t L. " + precio[O_Frijoles]
                     + "\n 114.............. " + producto[O_Cuajada] + "\t \t \t \t \t L. " + precio[O_Cuajada]
                     + "\n 6................ " + productoAlcohol[O_Bebidas]
                     + "\n 7................ Totalizar");
@@ -73,7 +73,7 @@ public class Main {
                     break;
                 case 113:
                     subtotal += quesillo(precio);
-                    cantidad[O_Quesillo] += 1;
+                    cantidad[O_Frijoles] += 1;
                     break;
                 case 114:
                     subtotal += requeson(precio);
@@ -178,8 +178,8 @@ public class Main {
             i++;
         }
         i = 0;
-        while(i<cantidad[O_Quesillo]){
-            System.out.println("Quesillo" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Quesillo]+ "G");
+        while(i<cantidad[O_Frijoles]){
+            System.out.println("Frijoles" + "\t \t \t \t \t \t \t \t \t    " + precio[O_Frijoles]+ "G");
             i++;
         }
         i = 0;
@@ -270,8 +270,8 @@ public class Main {
         return subtotal;
     }
     public static double quesillo (double[] precio){
-        double subtotal = precio[O_Quesillo];
-        System.out.println("Se ha agregado una libra de quesillo al carrito");
+        double subtotal = precio[O_Frijoles];
+        System.out.println("Se ha agregado una medida de frijoles al carrito");
         System.out.println(subtotal);
         return subtotal;
     }
